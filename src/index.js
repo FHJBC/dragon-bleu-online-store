@@ -6,12 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 import { apiPlugin, storyblokInit } from "@storyblok/react";
 
-import { AnnouncementBar, BannerItemList, SliderFourBlocks, SliderThreeBlocks, StaticBlockFourVideos, StaticBlockTwoBlocks } from './components';
+import { AnnouncementBar, BannerItemList, SliderFourBlocks, SliderThreeBlocks, StaticBlockFiveBlocks, StaticBlockFourVideos, StaticBlockTwoBlocks, TabSliderEightBlocks } from './components';
 import CustomBanner from './components/CustomBanner/CustomBanner';
 import Feature from './components/Feature';
 import Grid from './components/Grid';
 import Page from './components/Page';
-import TabSliderEightBlocks from './components/TabSliderEightBlocks/TabSliderEightBlocks';
 import Teaser from './components/Teaser';
 
 storyblokInit({
@@ -28,6 +27,7 @@ storyblokInit({
     SliderFourBlocks: SliderFourBlocks,
     SliderThreeBlocks: SliderThreeBlocks,
     TabSliderEightBlocks: TabSliderEightBlocks,
+    StaticBlockFiveBlocks: StaticBlockFiveBlocks,
     StaticBlockTwoBlocks: StaticBlockTwoBlocks,
     StaticBlockFourVideos: StaticBlockFourVideos,
   }
