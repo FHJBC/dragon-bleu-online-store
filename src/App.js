@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { StoryblokComponent, useStoryblok } from '@storyblok/react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  let slug =
+    window.location.pathname === '/'
+      ? 'home'
+      : window.location.pathname.replace('/', '');
+
+  const story = useStoryblok(
+    slug,
+    // {
+    //   version: 'draft',
+    // },
+    {
+      resolve_relations: ['custom-banner.banner_items', 'selected-banner-items.banner_items'],
+    },
+    {
+      resolveRelations: ['custom-banner.banner_items', 'selected-banner-items.banner_items'],
+    }
   );
+
+  if (!story || !story.content) {
+    return <div>Loading...</div>;
+  }
+
+  return <StoryblokComponent blok={story.content} />;
 }
 
 export default App;

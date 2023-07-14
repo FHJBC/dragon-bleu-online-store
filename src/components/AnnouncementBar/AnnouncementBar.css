@@ -1,0 +1,25 @@
+.announcement-bar {
+  background-color: #00184c;
+}
+
+.announcement-bar__link {
+  display: block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  font-family: inherit;
+}
+
+.announcement-bar__message {
+  font-family: 'Forma DJR Display', sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  filter: contrast(0.3);
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
